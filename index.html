@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#082b52">
+  <meta name="description" content="Quality Air - كولتي إير للتبريد والتكييف. صيانة وتركيب التكييفات والثلاجات وأجهزة التبريد في الفيوم وجميع محافظات مصر.">
+  <title>Quality Air | كولتي إير للتبريد والتكييف</title>
+  <style>
+    :root {
+      --navy: #082b52;
+      --blue: #0878c9;
+      --blue-dark: #075a99;
+      --pale: #eaf6ff;
+      --text: #17324d;
+      --muted: #62778b;
+      --line: #d7e6f2;
+      --white: #ffffff;
+      --shadow: 0 12px 34px rgba(8, 43, 82, .08);
+      --radius: 18px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+    body {
+      margin: 0; color: var(--text); background: #f7fbff;
+      font-family: Tahoma, Arial, sans-serif; line-height: 1.8;
+    }
+    a { color: inherit; text-decoration: none; }
+    button, input, select, textarea { font: inherit; }
+    .container { width: min(1120px, 92%); margin-inline: auto; }
+    .topbar { position: sticky; top: 0; z-index: 10; background: var(--navy); color: white; box-shadow: 0 4px 18px #001b3428; }
+    .nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 0; flex-wrap: wrap; }
+    .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; line-height: 1.25; }
+    .brand-icon { display: grid; place-items: center; width: 46px; height: 46px; border-radius: 14px; background: white; color: var(--blue); font-size: 27px; }
+    .brand small { display: block; font-size: 12px; font-weight: 400; margin-top: 4px; }
+    .navlinks { display: flex; flex-wrap: wrap; align-items: center; gap: 15px; font-size: 14px; }
+    .navlinks a:hover { color: #9bdcff; }
+    .btn { display: inline-flex; justify-content: center; align-items: center; gap: 7px; padding: 11px 17px; border: 0; border-radius: 12px; background: var(--blue); color: white; font-weight: 700; cursor: pointer; transition: .2s ease; }
+    .btn:hover { background: var(--blue-dark); transform: translateY(-1px); }
+    .btn-white { background: white; color: var(--navy); }
+    .btn-outline { background: transparent; border: 1px solid #b9e4ff; color: white; }
+    .hero { color: white; background: linear-gradient(125deg, #061f3d 0%, #075fa4 100%); padding: 68px 0; }
+    .hero-grid { display: grid; grid-template-columns: 1.25fr .75fr; align-items: center; gap: 30px; }
+    .tag { display: inline-block; border: 1px solid #ffffff55; background: #ffffff17; padding: 4px 13px; border-radius: 99px; font-size: 14px; }
+    h1 { margin: 15px 0; font-size: clamp(32px, 5vw, 55px); line-height: 1.3; }
+    .hero p { max-width: 680px; color: #e0f2ff; font-size: 18px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+    .hero-art { text-align: center; border: 1px solid #ffffff44; background: #ffffff12; padding: 26px; border-radius: 26px; }
+    .hero-art .snow { font-size: 82px; line-height: 1.25; }
+    .hero-art strong { display: block; font-size: 24px; }
+    .hero-art span { color: #d8efff; }
+    section { padding: 58px 0; }
+    .section-head { text-align: center; max-width: 760px; margin: 0 auto 30px; }
+    .section-head h2 { margin: 0 0 9px; font-size: clamp(25px, 3vw, 35px); color: var(--navy); }
+    .section-head p { color: var(--muted); margin: 0; }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 17px; }
+    .card { background: white; border: 1px solid var(--line); border-radius: var(--radius); padding: 23px; box-shadow: var(--shadow); }
+    .card-icon { font-size: 33px; }
+    .card h3 { color: var(--navy); margin: 7px 0; font-size: 19px; }
+    .card p { color: var(--muted); margin: 0; }
+    .alt { background: var(--pale); }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; align-items: stretch; }
+    .about-copy h2, .coverage h2 { color: var(--navy); margin-top: 0; }
+    .checks { list-style: none; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .checks li { padding: 10px 12px; border: 1px solid var(--line); border-radius: 11px; background: white; }
+    .coverage { padding: 25px; background: var(--navy); color: white; border-radius: 22px; }
+    .coverage h2 { color: white; }
+    .coverage p { color: #e1f1ff; }
+    .pills { display: flex; flex-wrap: wrap; gap: 8px; }
+    .pill { border: 1px solid #ffffff55; border-radius: 99px; padding: 4px 11px; font-size: 14px; }
+    .formbox { max-width: 790px; margin: auto; padding: 25px; background: white; border: 1px solid var(--line); border-radius: 22px; box-shadow: var(--shadow); }
+    .formgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    label { display: block; font-weight: 700; font-size: 14px; }
+    input, select, textarea { display: block; width: 100%; margin-top: 5px; padding: 12px; border: 1px solid #c9d9e7; border-radius: 10px; background: #fff; color: var(--text); }
+    input:focus, select:focus, textarea:focus { outline: 2px solid #8acfff; border-color: var(--blue); }
+    textarea { min-height: 105px; resize: vertical; }
+    .full { grid-column: 1 / -1; }
+    .hint { color: var(--muted); font-size: 12px; margin: 7px 0 0; }
+    .contacts { display: grid; grid-template-columns: 1fr 1fr; gap: 13px; max-width: 850px; margin: auto; }
+    .contact-item { display: flex; align-items: center; justify-content: space-between; gap: 12px; background: white; border: 1px solid var(--line); border-radius: 13px; padding: 14px; }
+    .phone { direction: ltr; unicode-bidi: isolate; font-weight: 700; }
+    .contact-item a { color: var(--blue); font-weight: 700; white-space: nowrap; }
+    .faq { max-width: 850px; margin: auto; display: grid; gap: 12px; }
+    details { background: white; border: 1px solid var(--line); border-radius: 12px; padding: 14px 17px; }
+    summary { cursor: pointer; font-weight: 700; color: var(--navy); }
+    details p { color: var(--muted); margin-bottom: 0; }
+    footer { background: #041a32; color: #dcecff; text-align: center; padding: 26px 0; }
+    footer p { margin: 4px 0; }
+    .float-wa { position: fixed; z-index: 9; bottom: 18px; left: 16px; padding: 12px 17px; border-radius: 99px; background: #159d5b; color: white; box-shadow: 0 7px 22px #0003; font-weight: 700; }
+    @media (max-width: 760px) {
+      .nav { justify-content: center; }
+      .brand { margin-inline: auto; }
+      .navlinks { justify-content: center; gap: 10px; }
+      .hero { padding: 45px 0; }
+      .hero-grid, .about-grid { grid-template-columns: 1fr; }
+      .hero-art { display: none; }
+      .cards { grid-template-columns: repeat(2, 1fr); }
+      .contacts { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 470px) {
+      .cards, .formgrid, .checks { grid-template-columns: 1fr; }
+      .full { grid-column: auto; }
+      .contact-item { flex-wrap: wrap; }
+      .navlinks { font-size: 13px; }
+      .hero p { font-size: 16px; }
+      .formbox { padding: 17px; }
+    }
+  </style>
+</head>
+<body>
+<header class="topbar">
+  <div class="container nav">
+    <a class="brand" href="#home" aria-label="Quality Air الصفحة الرئيسية">
+      <span class="brand-icon" aria-hidden="true">❄</span>
+      <span>QUALITY AIR<small>كولتي إير للتبريد والتكييف</small></span>
+    </a>
+    <nav class="navlinks" aria-label="القائمة الرئيسية">
+      <a href="#services">خدماتنا</a><a href="#about">عن الشركة</a><a href="#coverage">التغطية</a><a href="#request">طلب صيانة</a><a href="#contact">اتصل بنا</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div>
+        <span class="tag">راحة بيتك .. مسؤوليتنا</span>
+        <h1>تبريد وتكييف بجودة تقدر تعتمد عليها</h1>
+        <p>تركيب وصيانة وإصلاح التكييفات والثلاجات وأجهزة التبريد. تركيزنا الأساسي على الفيوم مع استقبال طلبات الخدمة من جميع محافظات مصر حسب إمكانية التغطية.</p>
+        <div class="hero-actions">
+          <a class="btn btn-white" href="#request">اطلب خدمة الآن</a>
+          <a class="btn btn-outline" href="https://wa.me/201220966146" target="_blank" rel="noopener noreferrer">تواصل عبر واتساب</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true"><div class="snow">❄️</div><strong>Quality Air</strong><span>صيانة • تركيب • إصلاح</span></div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <div class="section-head"><h2>خدماتنا</h2><p>حلول للتبريد والتكييف للأفراد والأنشطة التجارية، مع توضيح تفاصيل الطلب قبل بدء العمل.</p></div>
+      <div class="cards">
+        <article class="card"><div class="card-icon" aria-hidden="true">❄️</div><h3>صيانة التكييفات</h3><p>تنظيف وفحص الأعطال ومراجعة كفاءة التبريد والكشف عن التسريب.</p></article>
+        <article class="card"><div class="card-icon" aria-hidden="true">🛠️</div><h3>تركيب وفك التكييف</h3><p>تركيب ونقل وفك الأجهزة وفحص التشغيل والتوصيلات.</p></article>
+        <article class="card"><div class="card-icon" aria-hidden="true">🧊</div><h3>الثلاجات والديب فريزر</h3><p>فحص وإصلاح أعطال التبريد والتشغيل وفق حالة الجهاز.</p></article>
+        <article class="card"><div class="card-icon" aria-hidden="true">🏪</div><h3>معدات التبريد التجارية</h3><p>خدمات صيانة وإصلاح معدات التبريد للمحلات والأنشطة التجارية.</p></article>
+        <article class="card"><div class="card-icon" aria-hidden="true">🔎</div><h3>فحص الأعطال</h3><p>فهم المشكلة وتحديد الخطوات المناسبة للإصلاح قبل التنفيذ.</p></article>
+        <article class="card"><div class="card-icon" aria-hidden="true">♻️</div><h3>بيع وشراء واستبدال</h3><p>استقبال استفسارات بيع وشراء وتبديل الأجهزة الجديدة والمستعملة حسب المتاح.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="about">
+    <div class="container about-grid">
+      <div class="about-copy">
+        <h2>عن Quality Air</h2>
+        <p>هدفنا تقديم خدمة واضحة ومحترمة في مجال التبريد والتكييف، بدايةً من التواصل وتسجيل تفاصيل العطل، وحتى الاتفاق على الخطوة التالية.</p>
+        <ul class="checks"><li>✓ اهتمام بالتفاصيل</li><li>✓ تواصل مباشر</li><li>✓ خدمات منزلية وتجارية</li><li>✓ تغطية واسعة داخل مصر</li></ul>
+      </div>
+      <div class="coverage" id="coverage">
+        <h2>الفيوم وجميع محافظات مصر</h2>
+        <p>الفيوم هي منطقة التركيز الأساسية. ابعتلنا اسم منطقتك لتأكيد إمكانية تقديم الخدمة وموعدها.</p>
+        <div class="pills"><span class="pill">الفيوم</span><span class="pill">القاهرة</span><span class="pill">الجيزة</span><span class="pill">بني سويف</span><span class="pill">المنيا</span><span class="pill">الإسكندرية</span><span class="pill">باقي المحافظات</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="request">
+    <div class="container">
+      <div class="section-head"><h2>اطلب صيانة أو خدمة</h2><p>املأ البيانات التالية، وسيتم فتح واتساب برسالة جاهزة تراجعها قبل إرسالها.</p></div>
+      <div class="formbox">
+        <form class="formgrid" id="serviceForm">
+          <div><label for="customerName">الاسم *</label><input id="customerName" name="customerName" autocomplete="name" required maxlength="80" placeholder="اكتب اسمك"></div>
+          <div><label for="customerPhone">رقم الموبايل *</label><input id="customerPhone" name="customerPhone" type="tel" inputmode="tel" autocomplete="tel" required maxlength="25" placeholder="رقم للتواصل"></div>
+          <div><label for="customerArea">المحافظة / المنطقة *</label><input id="customerArea" name="customerArea" required maxlength="100" placeholder="مثال: الفيوم - سنورس"></div>
+          <div><label for="serviceType">نوع الخدمة *</label><select id="serviceType" name="serviceType" required><option value="">اختار الخدمة</option><option>صيانة تكييف</option><option>تركيب أو فك تكييف</option><option>ثلاجة أو ديب فريزر</option><option>معدات تبريد تجارية</option><option>شراء أو استبدال جهاز</option><option>خدمة أخرى</option></select></div>
+          <div class="full"><label for="serviceDetails">تفاصيل العطل أو الطلب</label><textarea id="serviceDetails" name="serviceDetails" maxlength="1000" placeholder="اكتب تفاصيل المشكلة باختصار (اختياري)"></textarea></div>
+          <div class="full"><button class="btn" type="submit">تجهيز الطلب على واتساب</button><p class="hint">الموقع لا يخزّن بياناتك. سيتم فتح واتساب برسالة جاهزة، ويمكنك مراجعتها قبل الإرسال.</p></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="contact">
+    <div class="container">
+      <div class="section-head"><h2>تواصل معانا</h2><p>اختار أي رقم واتساب من الأرقام التالية.</p></div>
+      <div class="contacts">
+        <div class="contact-item"><span class="phone">01220966146</span><a href="https://wa.me/201220966146" target="_blank" rel="noopener noreferrer">افتح واتساب ↗</a></div>
+        <div class="contact-item"><span class="phone">01004536263</span><a href="https://wa.me/201004536263" target="_blank" rel="noopener noreferrer">افتح واتساب ↗</a></div>
+        <div class="contact-item"><span class="phone">01508239099</span><a href="https://wa.me/201508239099" target="_blank" rel="noopener noreferrer">افتح واتساب ↗</a></div>
+        <div class="contact-item"><span class="phone">01111960299</span><a href="https://wa.me/201111960299" target="_blank" rel="noopener noreferrer">افتح واتساب ↗</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="container">
+      <div class="section-head"><h2>أسئلة شائعة</h2><p>معلومات سريعة قبل طلب الخدمة.</p></div>
+      <div class="faq">
+        <details><summary>هل بتخدموا خارج الفيوم؟</summary><p>التركيز الأساسي على الفيوم، ويمكنك إرسال منطقتك عبر واتساب لتأكيد إمكانية الخدمة خارجها.</p></details>
+        <details><summary>إزاي أطلب صيانة؟</summary><p>املأ نموذج طلب الخدمة واضغط على الزر، أو تواصل مباشرة مع أي رقم واتساب ظاهر في الموقع.</p></details>
+        <details><summary>هل السعر بيتحدد من الموقع؟</summary><p>لا، السعر يعتمد على نوع الجهاز والعطل ومكان الخدمة. ابعت تفاصيل الطلب للتواصل وتوضيح الخطوة التالية.</p></details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container"><strong>QUALITY AIR | كولتي إير للتبريد والتكييف</strong><p>راحة بيتك .. مسؤوليتنا</p><p>الفيوم وجميع محافظات مصر</p></div>
+</footer>
+<a class="float-wa" href="https://wa.me/201220966146" target="_blank" rel="noopener noreferrer" aria-label="تواصل مع Quality Air عبر واتساب">واتساب 💬</a>
+
+<script>
+(function () {
+  "use strict";
+  var form = document.getElementById("serviceForm");
+  if (!form) return;
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    var name = document.getElementById("customerName").value.trim();
+    var phone = document.getElementById("customerPhone").value.trim();
+    var area = document.getElementById("customerArea").value.trim();
+    var service = document.getElementById("serviceType").value;
+    var details = document.getElementById("serviceDetails").value.trim();
+
+    if (!name || !phone || !area || !service) {
+      form.reportValidity();
+      return;
+    }
+
+    var message = [
+      "طلب خدمة جديد - Quality Air",
+      "الاسم: " + name,
+      "رقم التواصل: " + phone,
+      "المحافظة / المنطقة: " + area,
+      "نوع الخدمة: " + service,
+      "التفاصيل: " + (details || "لا توجد تفاصيل إضافية")
+    ].join("\n");
+
+    var whatsappUrl = "https://wa.me/201220966146?text=" + encodeURIComponent(message);
+    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+  });
+})();
+</script>
+</body>
+</html>
